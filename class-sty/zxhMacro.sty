@@ -1,0 +1,102 @@
+%----------------------------------------
+%----------------zxhMacro----------------
+
+\ProvidesPackage{zxhMacro}
+
+%----------------------------------------
+%----------------调用宏包-----------------
+%-----------\RequirePackage[]{}----------
+
+\RequirePackage{graphicx} %graphicx宏包辅助支持插入图片
+\RequirePackage{multirow} %纵向合并单元格需要用到multirow宏包提供的\multirow命令
+\RequirePackage{array}    %array宏包提供了辅助格式>和<，用于给列格式前后加上修饰命令
+\RequirePackage{float}    %float宏包为浮动体提供了H 位置参数，不与htbp及!混用
+\RequirePackage{booktabs} %三线表由booktabs宏包支持 \toprule \midrule和\bottomrule
+\RequirePackage{fancyhdr} %fancyhdr 宏包改善了页眉页脚样式的定义方式
+\RequirePackage{geometry} %改变页面布局
+\RequirePackage{xcolor}   %rgb cmyk gray hs 自定义颜色-> \definecolor
+\RequirePackage{amsmath}  %math sign
+\RequirePackage{amsthm}   %Theorem Proof
+\RequirePackage{subfig}   %子图小标题 \subfloat[小标题名称]{\includegraphics[]{文件名}}
+\RequirePackage{hyperref} %超链接 宏包调用放最后
+
+%----------------版面设置----------------
+\geometry
+{
+	a4paper,
+	%Word常用格式
+	left=1.25in,
+	right=1.25in,
+	top=1in,
+	bottom=1in
+	% hmargin=1.25in,vmargin=1in  or margin={1.25in,1in} 左右相同 上下相同
+	% margin=1.25in 上下左右边距相同
+	% 直接设置body大小 例如：body={8in,11in}
+	%单独设置某页格式 使用命令：\thispagestyle{} empty plain headings myheadings
+	%缺省\maketitle 命令自动设置其所在页格式为 plain 因此 若想在该页使用 fancy 格式则应该在 \maketile 后面使用命令 \thispagestyle{fancy}
+}
+
+%----------------页眉页脚设置----------------
+\pagestyle{fancy} %and empty plain headings(article default) myheadings  
+%fancy默认格式：
+%<head> l{subsection} c{}         r{section} 
+%<foot> l{}           c{thepage}  r{}        
+	%\fancyhf{} % 清空当前的页眉页脚
+	%\lhead{}   %也可以使用\fancyhead[]{text}
+	%\chead{}   %---------\fancyfoot[]{text}  
+	%\rhead{}   
+	%\lfoot{}    % 内容可为文字 可控制字体
+	%\cfoot{}    % 若显示页码:\thepage
+	%\rfoot{}    
+\renewcommand{\headrulewidth}{0pt} %页眉页脚线宽
+\renewcommand{\footrulewidth}{0pt}
+
+%----------------超链接设置----------------
+\hypersetup
+{
+	colorlinks=true,%or false
+%	pdfborder={0 0 0}
+}
+
+%----------------计数器设置----------------
+%修改输出格式
+%\renewcommand\thepage{--~\Roman{page}~--}  %或\pagenumbering{Roman} arabic默认罗马数字
+%\renewcommand\thefootnote{[\arabic{footnote}]}
+
+\setcounter{secnumdepth}{3} %控制章节编号深度 默认3--subsubsection
+\setcounter{tocdepth}{3}    %控制生成目录深度 默认3--subsubsection
+
+%----------------------------------------
+%--------------\renewcommand-------------
+
+%------------------标题------------------
+%\renewcommand{\chaptername}{Chapter}  %\chapter 命令生成的标题前缀
+%\renewcommand{\abstractname}{摘要}    %摘要环境abstract 的标题名称
+%\renewcommand{\contentsname}{目录}    %\tableofcontents 命令生成的目录标题
+%\renewcommand{\indexname}{Index}      %\printindex 命令生成的索引标题
+%\renewcommand{\tablename}{Table}      %table 浮动体中\caption 命令生成的标题前缀
+%\renewcommand{\figurename}{Figure}    %figure 浮动体中\caption 命令生成的标题前缀
+%\renewcommand{\listfigurename}{List of Figures}  %\listoffigures 命令生成的插图目录标题
+%\renewcommand{\listtablename}{List of Tables}    %\listoftables 命令生成的表格目录标题
+%\renewcommand{\appendixname}{Appendix} %使用\appendix 命令生成的附录部分的章标题前缀
+%\renewcommand{\refname}{References} %thebibliography环境或\bibliography 令生成的参考文献标题（article 文档类）
+
+%------------------尺寸------------------  
+%\renewcommand{\arraycolsep}{5pt}       %array 环境的表格项前后的间距
+%\renewcommand{\tabcolsep}{6pt}         %tabular 环境的表格项前后的间距
+%\renewcommand{\arrayrulewidth}{0.4pt}  %表格线宽
+%\renewcommand{\doublerulesep}{2pt}     %连续两根表格线之间的间距
+%\renewcommand{\abovecaptionskip}{10pt} %\caption 命令位于图表下方时，与上方图表的间距
+%\renewcommand{\belowcaptionskip}{0pt}  %\caption 命令位于图表上方时，与下方图表的间距
+%\renewcommand{\columnsep}{10pt}        %双栏排版下两栏的间距
+%\renewcommand{\columnseprule}{0pt}     %双栏排版下两栏之间竖线的宽度
+
+%----------------------------------------
+%----------------\newcommand-------------
+
+
+%----------------------------------------
+%-------------\newenvironment------------
+
+
+

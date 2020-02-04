@@ -1,0 +1,136 @@
+%----------------------------------
+%-------------导言区----------------
+
+%\documentclass{zxhClass}
+\documentclass[12pt,oneside,a4paper]{ctexart}
+
+\usepackage{zxhMacro}
+\usepackage{zxhMacroset}
+
+%----------------------------------
+%-------------正文区----------------
+
+\begin{document}
+
+
+
+	\title{张现华最帅}
+	\author{张现华\thanks{http://www.github.com}}
+	\date{2020-0202\thanks{http://www.github.com}}	
+	\maketitle
+	\newpage
+	
+	\begin{abstract}
+		这是摘要---欢迎使用 Visual Studio 2019！ 在此版本中，可轻松选择并仅安装所需功能。 并且由于其最小占用减小，因此其安装速度快且对系统的影响极小。
+	\end{abstract}
+
+
+	\tableofcontents
+%	\listoftables
+%	\listoffigures
+	
+	\section{Braking}
+		\subsection{sub}
+			\subsubsection{subsub}
+	\section[Cornering]{The Dynamics of Cornering}
+		\subsection{sub}
+\noindent 无人驾驶车辆的传感器有视觉（高清摄像头）、激光测距雷达和高精度毫米波雷达，它们各有优势，可混合使用在无人驾驶车辆上。（高精度GPS）\par
+在实际应用上，特斯拉电动汽车公司提出了一种以视觉摄像头加上毫米波雷达进行混合使用的解决方案，而以谷歌、百度为代表的公司则采用激光雷达来实现车辆的无人驾驶。\par
+激光雷达测距远并且测量精度很高，但是激光雷达体积比较庞大，此外，激光雷达还有其致命的缺点—它无法应对雨雪、大雾等恶劣天气，并且它也无法对路标、街景进行识别。而与激光雷达相比，毫米波雷达在无人驾驶车辆的应用上面则更要有优势。 \par
+毫米波雷达起源于20 世纪40 年代，经过多次迭代更新已经发展得十分成熟。无人驾驶车辆所使用的毫米波雷达主要为77GHz 波段的毫米波，其在云、雾、烟尘中传播损失较小，故能全天候使用。此外，毫米波雷达具有更小的天线孔径和组件体积，比较适合安装在家用车辆上面。因而，毫米波雷达是未来无人车的首选传感器。
+视觉（高清摄像头）是无人驾驶系统中不可或缺的一环，它能够对街景图像和交通信号标志进行采集和识别，帮助车辆做出正确决策。\footnote{123}\par
+无人驾驶车辆的传感器有视觉（高清摄像头）、激光测距雷达和高精度毫米波雷达，它们各有优势，可混合使用在无人驾驶车辆上。（高精度GPS）\ref{表格1}\par
+
+
+%\makebox[10em][r]{Test some words.}\\
+\fbox{Test some words.}\\
+\rule{4pt}{4pt}\\
+\rule[4pt]{6pt}{8pt} and
+\rule[-4pt]{6pt}{8pt} box.
+
+
+
+\url{http://www.github.com}\par
+\nolinkurl{http://www.github.com} \par
+\href{http://www.baidu.com}{Git}
+
+%[]中可以加 - + * 也可以什么都没有  
+%也可以是  1) 2) 3) (1) (2)也可以是汉字等等 	
+		\begin{enumerate}
+			\item 123
+			\item[*] 123
+			\item 123
+		\end{enumerate}
+	
+        %无序列表	
+		\begin{itemize}
+			\item 123
+			\begin{itemize}
+				\item[(1)] 123
+			\end{itemize}
+		\end{itemize}
+%强调解释某个词或某句话	
+	\begin{description}
+		\item[Enumerate] Numbered list
+	\end{description}
+
+Francis Bacon says:
+\begin{quotation}
+	Knowledge is power.
+\end{quotation}
+\begin{verbatim}
+	#include <iostream>
+\end{verbatim}
+\verb|\LaTeX|
+
+%>{\itshape}l<{}   一个完整的
+\begin{table}[htbp]
+	\begin{tabular}{>{\itshape}l<{}|cc}
+		\hline 
+		列 格式      &    说明&\\
+		\hline
+		l/c/r       &   单元格内容左对齐/居中/右对齐，不折行&\\
+		\cline{2-3}
+		p{⟨width⟩}  &   单元格宽度固定为⟨width⟩，可自动折行&\\
+		\hline
+	\end{tabular}
+	\caption{table1}\label{表格1}
+\end{table}
+
+\begin{table}[htbp]
+	\begin{flushright}
+		\begin{tabular}{>{\itshape}l<{}cc}
+			\toprule
+			列 格式      &    说明&\\
+			\midrule
+			l/c/r       &   单元格内容左对齐/居中/右对齐，不折行&\\
+			p{⟨width⟩}  &   单元格宽度固定为⟨width⟩，可自动折行&\\
+			\bottomrule
+		\end{tabular}
+		\caption{table2}
+	\end{flushright}
+\end{table}
+
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{123}	
+	\caption{figure1}
+\end{figure}
+
+123345\\ddsada\\
+dadasdas\\
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[12321]{\includegraphics{123}}	
+	\subfloat[32123]{\includegraphics{123}}	
+	\caption{figure2}
+\end{figure}
+
+$ \iiint $
+\begin{equation}
+	\int f''(x) dx = f'(x) + c
+\end{equation}
+
+\end{document}
