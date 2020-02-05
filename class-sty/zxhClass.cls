@@ -49,9 +49,9 @@
 \CTEXsetup     %------也可通过 \renewcommand 设置---------
 [
 %	name={第,节},       
-%	number={\arabic{section}}, %section的标题为大写罗马数字为编号 sub和subsub仍为\arabic
-%	format={\Large\bfseries}, %常用于控制章节标题的对齐方式 \centering ...
-%	nameformat={},            %通过 \huge \bfseries 等控制
+%	number={\arabic{section}},  %section的标题为大写罗马数字为编号 sub和subsub仍为\arabic
+%	format={\Large\bfseries},   %常用于控制章节标题的对齐方式 \centering ...
+%	nameformat={},              %通过 \huge \bfseries 等控制
 %	beforeskip={-3.5ex plus -1ex minus -.2ex}, %default setting 可修改
 %	afterskip={2.3ex plus .2ex},
 %	indent={0pt},
