@@ -4,11 +4,13 @@
 
 %----------------声名图片位置-------------
 %----------------对齐方式----------------
-%----------------页面设置----------------
-%----------------版面设置----------------
-%---------------页眉页脚设置--------------
-%----------------超链接设置---------------
-%----------------计数器设置---------------
+%-------------------页面------------------
+%-------------------版面------------------
+%-----------------页眉页脚----------------
+%------------------超链接-----------------
+%------------------计数器-----------------
+%-----------------数学公式----------------
+%-----------------参考文献----------------
 
 %-------------声名图片位置-----------
 \graphicspath{{figures/}}
@@ -60,7 +62,7 @@
 \hypersetup
 {
 	colorlinks=true,%or false
-%	pdfborder={0 0 0}
+%	pdfborder={0 0 0}   %超链接边框
 }
 
 %----------------计数器设置----------------
@@ -71,10 +73,20 @@
 %\renewcommand{\thesection}{\arabic{section}}
 %\renewcommand{\thesubsection}{\thesection.\arabic{subsection}} 
 %\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
 %%---对其他计数器重新定义格式方法一致 chapter table figure equation等---
-%%---\arabic 可以替换为 \roman \Roman \chinese 等---
+%%---\arabic 可以替换为 \roman \Roman \chinese \arabic 等---
 
 \setcounter{secnumdepth}{3} %控制章节编号深度 默认3--subsubsection
 \setcounter{tocdepth}{3}    %控制生成目录深度 默认3--subsubsection
 
+%----------------数学公式设置-------------
+%\renewcommand{\theequation}{\thesubsection.\arabic{equation}} %使公式编号和章节联系在一起(不能自动清零)  可用于调整其他格式
+\numberwithin{equation}{section}    %使公式编号和章节联系在一起 好！
+
+%----------------参考文献位置--------------
+%----基本格式 plain  unsrt alpha abbrv-----
+\bibliographystyle{plain}  %定义参考文献格式 
+%%-----\bibliography{bib file} 指明要使用的文献数据库 在文章中合适位置使用
+%%-----可同时引用多个bib库 中间用逗号隔开 引用时不加后缀.bib
 

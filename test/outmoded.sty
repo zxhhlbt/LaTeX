@@ -1,0 +1,44 @@
+% %--------------------字号、字距、字宽和缩进-----------------------
+% %-----\zihao{⟨字号⟩}
+% %-----\ziju{⟨字宽的倍数⟩}
+% %-----\CTEXindent         正常的缩进两个汉字字宽的距离
+% %-----\CTEXnoindent       取消缩进
+% %-----\chinese{⟨counter⟩}  设置某些计数器为中文
+
+% %---------------------------------------------------------------
+% %--------\CTEXoptions[⟨key1⟩=⟨val1⟩,⟨key2⟩=⟨val2⟩,...]--------
+% \CTEXoptions  %------也可通过 \renewcommand 设置---------
+% [
+% 	contentsname={Contents},   %目录名
+% %	listfigurename={}, %表格目录
+% %	listtablename={},  %插图目录
+% %	figurename={},     %图
+% %	tablename={} ,     %表
+% %	abstractname={},   %摘要
+% %	indexname={},      %索引
+% %	bibname={Reference},        %参考文献
+% ]
+
+
+% %--------\CTEXsetup[⟨key1⟩=⟨val1⟩,⟨key2⟩=⟨val2⟩,...]{⟨type⟩}---------
+% %%-----number={⟨number⟩}---------------用于设置章节编号的数字样式
+% %%-----format={⟨format⟩}---------------用于控制章节标题的全局格式  作用域为章节名字和随后的标题内容
+% %%-----nameformat={⟨nameformat⟩}-------用于控制章节名字的格式   作用域为章节名字 <包括编号>
+% %%-----name={⟨prename⟩,⟨postname⟩}----- 用于设置章节的名字 包括章节编号前后的词语 逗号隔开
+% %%-----beforeskip={⟨beforeskip⟩}-------用于控制章节标题  前  的空距
+% %%-----afterskip={⟨beforeskip⟩}--------用于控制章节标题  后  的空距
+% %%-----indent={⟨indent⟩}---------------用于控制章节标题本身的缩进。
+
+% \CTEXsetup     %------也可通过 \renewcommand 设置---------
+% [
+%    name={第,节},       
+% %   number={\arabic{section}},  %section的标题为大写罗马数字为编号 sub和subsub仍为\arabic
+% %   format={\Large\bfseries},   %常用于控制章节标题的对齐方式 \centering ...
+% %	nameformat={},              %通过 \huge \bfseries 等控制
+% %	beforeskip={-3.5ex plus -1ex minus -.2ex}, %default setting 可修改
+% %	afterskip={2.3ex plus .2ex},
+% %	indent={0pt},
+% %		%若只想修改标题格式中的某些参数而不是完全重新设置 可以使用带+ 号的设置选项
+% %		format+={\zihao{1}}{section} %则标题使用一号字体 而其他格式设置保持不变
+% ]{section}
+% % part  chapter  subsection  subsubsection paragraph subparagraph

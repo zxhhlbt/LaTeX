@@ -14,7 +14,9 @@
 \RequirePackage{fancyhdr} %fancyhdr 宏包改善了页眉页脚样式的定义方式
 \RequirePackage{geometry} %改变页面布局
 \RequirePackage{xcolor}   %rgb cmyk gray hs 自定义颜色-> \definecolor
-\RequirePackage{amsmath}  %math sign
+\RequirePackage{amsmath}  %math
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
 \RequirePackage{amsthm}   %Theorem Proof
 \RequirePackage{subfig}   %子图小标题 \subfloat[小标题名称]{\includegraphics[]{文件名}}
 \RequirePackage{hyperref} %超链接 宏包调用放最后
@@ -44,8 +46,9 @@
 %\renewcommand{\tabcolsep}{6pt}         %tabular 环境的表格项前后的间距
 %\renewcommand{\arrayrulewidth}{0.4pt}  %表格线宽
 %\renewcommand{\doublerulesep}{2pt}     %连续两根表格线之间的间距
-%\renewcommand{\abovecaptionskip}{10pt} %\caption 命令位于图表下方时，与上方图表的间距
+\renewcommand{\abovecaptionskip}{10pt} %\caption 命令位于图表下方时，与上方图表的间距
 %\renewcommand{\belowcaptionskip}{0pt}  %\caption 命令位于图表上方时，与下方图表的间距
+
 %\renewcommand{\columnsep}{10pt}        %双栏排版下两栏的间距
 %\renewcommand{\columnseprule}{0pt}     %双栏排版下两栏之间竖线的宽度
 

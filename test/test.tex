@@ -1,0 +1,51 @@
+%----------------------------------
+%-------------导言区----------------
+\documentclass{zxhClass}
+\usepackage{zxhMacro}
+\usepackage{zxhMacroset}
+
+%----------------------------------
+%-------------正文区----------------
+\begin{document}
+\cfoot{}
+\input{doc/cover.tex}      %封面
+\newpage
+\input{doc/copyright.tex}  %版权
+\newpage
+\input{doc/titlepage.tex}  %扉页
+\newpage
+%---------\pagenumbering{Roman}----------
+\cfoot{\thepage}
+\renewcommand{\thepage}{--~\Roman{page}~--}     
+\setcounter{page}{1} 
+\input{doc/abstract.tex}   %摘要
+\newpage
+
+\tableofcontents
+\listoftables   
+\listoffigures  
+\newpage
+%------------------BODY------------------
+\renewcommand{\thepage}{\arabic{page}}      
+\setcounter{page}{1}
+
+\input{doc/section1.tex}  
+\input{doc/section2.tex}
+\input{doc/section3.tex}
+
+\input{onlytest.tex}	
+
+%----------------附录----------------
+% \appendixname
+% \input{doc/appendix.tex}
+
+\cite{冯黎-118}       %在正文中插入
+\cite{薛博元方艳-119}
+\cite{谌华郭伟-117}
+\cite{谢晶-116}
+\cite{贾会群-120}
+
+%----------------参考文献-----------------
+\bibliography{reference/re}
+
+\end{document}
